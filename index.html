@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <style>
+input{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 30px;
+}
+.form{
+    width: 400px;
+padding: 40px;
+margin-left: 600px;
+}
+.head{
+    color: black;
+}
+.butt{
+  background-color: black;
+color: white;
+margin-bottom: 5px;
+width: 100px;
+}
+p{
+    color: grey;
+} 
+.dis{
+    display: none;
+}
+.edit{
+    padding: 10px;
+    border: 2px solid black;
+}
+.tab{
+    margin-left: 450px;
+}
+
+
+
+
+    /* .container{
+        overflow: hidden;
+    }
+    .tab{float: left;}
+    .tab-2{margin-left: 50px;}
+    .tab-2 input{display: block; margin-bottom: 10px;} */
+
+    /* .img{
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+    }
+    .bigImage{
+        width: 400px;
+        height: 300px;
+    } */
+
+   </style>
+</head>
+
+<body>
+    <!-- Chp(43-48) -->
+    <!-- Q1 -->
+
+    <!-- <a onclick="msg()" href="https://www.w3schools.com/">Visit W3Schools.com!</a> -->
+
+    <!-- Q2 -->
+    <!-- <img onclick="sms()" src="data:image/jpeg;base64,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">
+    <img onclick="sms()" height="200px" width="200px" src="https://static.toiimg.com/photo/73078527.cms">
+    <img onclick="sms()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ4snoRurh5hWt8ymCKuE6logp6SIlkhxkkTw&usqp=CAU"> -->
+
+    <!-- Q3 -->
+    <!-- <table id="deltBtn">
+        
+        <tbody>
+            <tr>
+                <td>Index</td>
+                <td>Name</td>
+                <td>Class</td>
+            </tr>
+            
+        <tr>
+            <td>0</td>
+            <td>Johne</td>
+            <td>10</td>
+           <td><button  onclick="function3(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Doe</td>
+            <td>9</td>
+            <td><button onclick="function3(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Evil</td>
+            <td>10</td>
+            <td><button  onclick="function3(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>james</td>
+            <td>8</td>
+            <td><button  onclick="function3(this)">Delete</button></td>
+        </tr>
+     </tbody>
+     </table>  -->
+     
+     <!-- chp(53-58) -->
+
+     <!-- <img height="300px" width="500px" id="before" onmouseover="swapPic()" onmouseout="pic()" src="https://specials-images.forbesimg.com/imageserve/5d35eacaf1176b0008974b54/960x0.jpg?cropX1=790&cropX2=5350&cropY1=784&cropY2=3349"> -->
+
+     <!-- <h1>
+         <span id="Thisone">10</span>
+     </h1>
+     <button onclick="subtractone()" type="button" > Back Me!</button> -->
+      <!-- <h1>
+         <span id="one">0</span>
+     </h1>
+     <button onclick="addone()" type="button" > Click Me!</button> -->
+
+    <!-- //CHP (49-52) -->
+
+    <!-- //Q1 -->
+
+        <!-- <center>
+            <h1>SinUp Form </h1>
+            <table border="4">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <td><input type="text" name="fname" id="fname"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Last Name</th>
+                        <td > <input type="text" name="lname" id="lname"></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td > <input type="text" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <td > <input type="text" name="age" id="age"></td>
+                    </tr>
+                    <tr id="btna">
+                        <td colspan="2"> <input type="button" name="button" id="btn" value="Submit" onclick="AddRow()"></td>
+                    </tr>
+                </tbody>
+            </table>
+             <br><br>
+             <table border="4" id="show">
+                 <thead>
+                     <tr>
+                         <th>First Name</th>
+                         <th>Last Name</th>
+                         <th>Email</th>
+                         <th>Age</th>
+                     </tr>
+                 </thead>
+             </table>
+             
+        </center> -->
+
+            <!-- //Q2 -->
+            <!-- <p id="pera"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus provident magni hic obcaecati voluptate, omnis in repudiandae quos ad assumenda placeat iusto, optio voluptatem dolorem quis iure eligendi sint quidem.
+            Voluptate vitae consequatur modi voluptatibus velit praesentium cumque earum nobis aliquid enim facilis numquam reprehenderit quaerat quam ullam cupiditate, eius autem fuga incidunt quo inventore adipisci. Esse unde dolorum commodi.
+         <button>  <a href="javascript:void(1);" onclick="readmore()">Read More</a> </button>
+
+            </p> -->
+
+            <!-- //Q3 -->
+
+            <!-- <div id="f" class="form">
+                <h1 class="head">Student Details</h1>
+                <p>Enter your information here</p>
+                <input type="text" name="name" id="name" placeholder="Enter your Name"><br>
+                <input type="text" name="fathername" id="fname" placeholder="Enter your Father name"><br>
+                <input type="text" name="rollno" id="rollno" placeholder="Enter your Roll No."><br>
+                <input type="text" name="class" id="class" placeholder="Enter your Class"><br>
+                <input type="text" name="faculty" id="fac" placeholder="Enter your Faculty"><br>
+                <button class="butt" onclick="submit()"> submit</button>
+            </div>
+            <table id="tab" class="dis tab">
+                <tr>
+                    <th>STUDENTS DATA</th>
+                </tr>
+            </table>
+            <div id="editform" class="form dis">
+                <h1 class="head">Edit Information</h1>
+                <p>Edit your information</p>
+                <input type="text" id="ename" placeholder="Enter your Name"><br>
+                <input type="text" id="efname" placeholder="Enter your Father name"><br>
+                <input type="text" id="erollno" placeholder="Enter your Roll No."><br>
+                <input type="text" id="eclass" placeholder="Enter your Class"><br>
+                <input type="text" id="efac" placeholder="Enter your Faculty"><br>
+                <button class="butt" onclick="save()">Save</button>
+            </div> -->
+
+
+               
+          <!-- <center>
+            <h1>SinUp Form </h1>
+            <table border="4">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <td><input type="text" name="fname" id="fname"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Last Name</th>
+                        <td > <input type="text" name="lname" id="lname"></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td > <input type="text" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <td > <input type="text" name="age" id="age"></td>
+                    </tr>
+                    <tr id="btna">
+                        <td colspan="2"> <input type="button" name="button" id="btn" value="Submit" onclick="AddRow()"></td>
+                    </tr>
+                </tbody>
+            </table>
+             <br><br>
+             <table border="4" id="show">
+                 <thead>
+                     <tr>
+                         <th>First Name</th>
+                         <th>Last Name</th>
+                         <th>Email</th>
+                         <th>Age</th>
+                         <td colspan="2"> <input type="button" name="button" id="btn" value="Action Button  "></td>
+
+                     </tr>
+                     <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        
+                        <td  > <input type="button" name="button" id="bt" value="Edit" ></td>
+                        <td  > <input type="button" name="button" id="bta" value="Delete" onclick="SomeDeleteRowFunction()"></td>
+                    </tr>
+                   
+                  
+                 </thead>
+             </table>
+             
+        </center>  -->
+
+     <!-- <div class="cointainer">
+         <div class="tab tab-1 ">
+             <table id="table " border="1">
+                 <tr>
+                     <th>First Name</th>
+                     <th> Last Name</th>
+                     <th>Age</th>
+                 </tr>
+             </table>
+         </div>
+         <div class="tab tab-2">
+             First name:<input type="text" name="fname" id="fname">
+             Last name:<input type="text" name="lname" id="lname">
+             Age:<input type="text" name="age" id="age">
+
+            <button onclick="addHTMLTableRow();">Add</button>
+            <button>Edit</button>
+            <button>Remove</button>
+         </div>
+     </div> -->
+
+<!-- //CHP (53-58) -->
+     <!-- <div>
+         <img onclick="ShowImage(this)"  data-toggle="modal" data-target="#exampleModal" class="img" src="https://www.drivespark.com/images/2020-06/2021-bmw-m5-competition-exterior-5.jpg">
+         <img onclick="ShowImage(this)" data-toggle="modal" data-target="#exampleModal" class="img" src="https://images.pexels.com/photos/241316/pexels-photo-241316.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+         <img  onclick="ShowImage(this)" data-toggle="modal" data-target="#exampleModal" class="img"  src="https://media.wired.com/photos/5d09594a62bcb0c9752779d9/125:94/w_1994,h_1500,c_limit/Transpo_G70_TA-518126.jpg">
+     </div>
+
+
+    
+  
+   Modal -->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Image</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="bigImage" src="" alt="" id="ModalImage">
+        </div> -->
+       
+      <!-- </div>
+    </div>
+  </div> --> 
+
+  <!-- CHP(58-67) -->
+  <!-- <div>
+    <h1> DOM </h1>
+    <div id=”form-content” class=”content”>
+    <label for=”first-name”>First Name:</label>
+    <input type=”text” id=”first-name” /> <br>
+    <label for=”last-name”>Last Name:</label>
+    <input type=”text” id=”last-name” /> <br>
+    <label for=”email”>Email :</label>
+    <input type=”text” id=”email” />
+    </div>
+    <div id=”main-content” class=”content”>
+    <p class=”render”> First Name : maheen</p>
+    <p class=”render” id=”lastName”>Last Name: natalia</p>
+    <p class=”render”> Email : nataliamaheen257@gmail.com</p>
+    <p class=”render”> Country : Pakistan </p>
+    <p class=”render”> contact : +92 300 1234</p>
+    </div>
+    </div> -->
+
+
+
+
+</body>
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>
